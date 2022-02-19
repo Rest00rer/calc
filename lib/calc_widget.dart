@@ -87,14 +87,6 @@ class TestWidget extends StatelessWidget {
                         ),
                         TableRow(
                           children: [
-                            BuildButton(btnText: '7', btnTextColor: Colors.black),
-                            BuildButton(btnText: '8', btnTextColor: Colors.black),
-                            BuildButton(btnText: '9', btnTextColor: Colors.black),
-                            BuildButton(btnText: '×', btnTextColor: Colors.orange[700]),
-                          ],
-                        ),
-                        TableRow(
-                          children: [
                             BuildButton(btnText: '4', btnTextColor: Colors.black),
                             BuildButton(btnText: '5', btnTextColor: Colors.black),
                             BuildButton(btnText: '6', btnTextColor: Colors.black),
