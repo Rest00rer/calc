@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'domain/services/calc_service.dart';
 
 class ViewModelState {

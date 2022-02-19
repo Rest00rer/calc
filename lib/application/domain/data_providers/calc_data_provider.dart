@@ -1,5 +1,7 @@
-import 'package:mscalp/domain/entity/calculator.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../entity/calculator.dart';
 
 class CalcDataProvider {
   final sharedPreferences = SharedPreferences.getInstance();

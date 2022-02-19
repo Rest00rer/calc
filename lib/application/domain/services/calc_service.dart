@@ -1,6 +1,7 @@
 import 'package:expressions/expressions.dart';
-import 'package:mscalp/domain/data_providers/calc_data_provider.dart';
-import 'package:mscalp/domain/entity/calculator.dart';
+
+import '../data_providers/calc_data_provider.dart';
+import '../entity/calculator.dart';
 // import 'package:math_expressions/math_expressions.dart';
 
 
