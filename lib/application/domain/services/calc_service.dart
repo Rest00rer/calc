@@ -1,4 +1,4 @@
-import 'package:expressions/expressions.dart';
+// import 'package:expressions/expressions.dart';
 
 import '../data_providers/calc_data_provider.dart';
 import '../entity/calculator.dart';
@@ -22,7 +22,7 @@ class CalcService {
     _calc = calc.copyWith(expression: _calc.expression.replaceAll('×', '*').replaceAll('÷', '/'));
     if (operators.contains(calc.expression[calc.expression.length - 1])) _calc = calc.copyWith(expression: _calc.expression.substring(0, _calc.expression.length - 1));
     if (_calc.expression.endsWith('/0')) _calc = calc.copyWith(result: 'На 0 делить нельзя', resultFontSize: 38.0);
-    Expression expression = Expression.parse(_calc.expression);
+    // Expression expression = Expression.parse(_calc.expression);
     // try {
     //   Parser p = Parser();
     //   Expression exp = p.parse(_calc.expression);

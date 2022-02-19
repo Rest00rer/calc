@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mscalp/application/ui/themes/app_theme.dart';
 import 'package:provider/provider.dart';
 
-import 'calc_widget.dart';
+import 'application/calc_widget.dart';
 
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'My Calc',
       theme: AppTheme.light,
       home: ChangeNotifierProvider(
           create: (_) {

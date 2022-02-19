@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:mscalp/application/ui/themes/app_theme.dart';
 import 'package:provider/provider.dart';
 
 import 'domain/services/calc_service.dart';
@@ -49,7 +50,7 @@ class TestWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[300],
+      backgroundColor: AppTheme.light.backgroundColor,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -72,42 +73,42 @@ class TestWidget extends StatelessWidget {
                       children: [
                         TableRow(
                           children: [
-                            BuildButton(btnText: 'C', btnTextColor: Colors.orange[700]),
-                            BuildButton(btnText: '⌫', btnTextColor: Colors.orange[700]),
-                            BuildButton(btnText: '%', btnTextColor: Colors.orange[700]),
-                            BuildButton(btnText: '÷', btnTextColor: Colors.orange[700]),
+                            BuildButtonOld(btnText: 'C', btnTextColor: Colors.orange[700]),
+                            BuildButtonOld(btnText: '⌫', btnTextColor: Colors.orange[700]),
+                            BuildButtonOld(btnText: '%', btnTextColor: Colors.orange[700]),
+                            BuildButtonOld(btnText: '÷', btnTextColor: Colors.orange[700]),
                           ],
                         ),
                         TableRow(
                           children: [
-                            BuildButton(btnText: '7', btnTextColor: Colors.black),
-                            BuildButton(btnText: '8', btnTextColor: Colors.black),
-                            BuildButton(btnText: '9', btnTextColor: Colors.black),
-                            BuildButton(btnText: '×', btnTextColor: Colors.orange[700]),
+                            BuildButtonOld(btnText: '7', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '8', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '9', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '×', btnTextColor: Colors.orange[700]),
                           ],
                         ),
                         TableRow(
                           children: [
-                            BuildButton(btnText: '4', btnTextColor: Colors.black),
-                            BuildButton(btnText: '5', btnTextColor: Colors.black),
-                            BuildButton(btnText: '6', btnTextColor: Colors.black),
-                            BuildButton(btnText: '-', btnTextColor: Colors.orange[700]),
+                            BuildButtonOld(btnText: '4', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '5', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '6', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '-', btnTextColor: Colors.orange[700]),
                           ],
                         ),
                         TableRow(
                           children: [
-                            BuildButton(btnText: '1', btnTextColor: Colors.black),
-                            BuildButton(btnText: '2', btnTextColor: Colors.black),
-                            BuildButton(btnText: '3', btnTextColor: Colors.black),
-                            BuildButton(btnText: '+', btnTextColor: Colors.orange[700]),
+                            BuildButtonOld(btnText: '1', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '2', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '3', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '+', btnTextColor: Colors.orange[700]),
                           ],
                         ),
                         TableRow(
                           children: [
-                            BuildButton(btnText: '00', btnTextColor: Colors.black),
-                            BuildButton(btnText: '0', btnTextColor: Colors.black),
-                            BuildButton(btnText: '.', btnTextColor: Colors.black),
-                            BuildButton(btnText: '=', btnTextColor: Colors.orange[700]),
+                            BuildButtonOld(btnText: '00', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '0', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '.', btnTextColor: Colors.black),
+                            BuildButtonOld(btnText: '=', btnTextColor: Colors.orange[700]),
                           ],
                         ),
                       ],
@@ -161,17 +162,19 @@ class _ResultTile extends StatelessWidget {
   }
 }
 
-class BuildButton extends StatefulWidget {
+
+
+class BuildButtonOld extends StatefulWidget {
   final String btnText;
   final Color? btnTextColor;
 
-  BuildButton({Key? key, required this.btnText, required this.btnTextColor}) : super(key: key);
+  BuildButtonOld({Key? key, required this.btnText, required this.btnTextColor}) : super(key: key);
 
   @override
-  State<BuildButton> createState() => _BuildButtonState();
+  State<BuildButtonOld> createState() => _BuildButtonOldState();
 }
 
-class _BuildButtonState extends State<BuildButton> {
+class _BuildButtonOldState extends State<BuildButtonOld> {
   bool _isElevated = true;
 
   bool _animEnd = false;
@@ -208,13 +211,13 @@ class _BuildButtonState extends State<BuildButton> {
               boxShadow: _isElevated
                   ? [
                       BoxShadow(
-                        color: Colors.yellow[700]!,
+                        color: Colors.deepPurple[700]!,
                         offset: const Offset(4, 4),
                         blurRadius: 15,
                         spreadRadius: 1,
                       ),
                       BoxShadow(
-                        color: Colors.yellow[200]!,
+                        color: Colors.deepPurple[200]!,
                         offset: Offset(-4, -4),
                         blurRadius: 15,
                         spreadRadius: 1,
@@ -222,21 +225,21 @@ class _BuildButtonState extends State<BuildButton> {
                     ]
                   : [
                       BoxShadow(
-                        color: Colors.yellow[700]!,
+                        color: Colors.deepPurple[700]!,
                         offset: const Offset(-4, -4),
                         blurRadius: 15,
                         spreadRadius: 1,
                       ),
                       BoxShadow(
-                        color: Colors.yellow[200]!,
+                        color: Colors.deepPurple[200]!,
                         offset: Offset(4, 4),
                         blurRadius: 15,
                         spreadRadius: 1,
                       )
                     ],
               gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [
-                Colors.yellow[200]!,
-                Colors.yellow[400]!,
+                Colors.deepPurple[200]!,
+                Colors.deepPurple[400]!,
               ]),
             ),
             onEnd: () {

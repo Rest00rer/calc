@@ -4,16 +4,22 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
+            // "program": "package:mscalp/application/main.dart",
             "name": "mscalp",
             "request": "launch",
             "type": "dart"
+            
         },
         {
-            "name": "mscalp (profile mode)",
+            // "program": "package:mscalp/application/main.dart",
+            "name": "mscalp",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
+            
         }
+        
     ]
 }
